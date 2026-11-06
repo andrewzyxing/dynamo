@@ -10,10 +10,10 @@
     "wheel": "1.6.0"
   },
   "mainTot": {
-    "sglang": "0.5.22",
-    "trtllm": "1.4.0rc1",
-    "vllm": "0.32.0",
-    "nixlSglang": "1.5.0",
+    "sglang": "0.5.23",
+    "trtllm": "1.4.0rc2",
+    "vllm": "0.33.0",
+    "nixlSglang": "1.5.2",
     "nixlTrtllm": "1.3.1",
     "nixlVllm": "1.5.0"
   },
@@ -2292,31 +2292,31 @@
   "nightliesNote": "ai-dynamo and ai-dynamo-runtime nightly builds from main publish wheels tagged `*.devYYYYMMDD` (since Apr 24, 2026); kvbm joined the nightly train on Aug 2, 2026. Install with pip or uv using `--pre` and the NVIDIA extra-index pattern shown above. Runtime containers publish to the `*-runtime-nightly` repositories on NGC, under a dated `YYYYMMDD-<shortsha>` tag plus a rolling `latest` tag. A night is listed once both its `ai-dynamo` and `ai-dynamo-runtime` wheels published; a night with an incomplete wheel train is omitted.",
   "nightlyBuilds": [
     {
-      "version": "1.7.0.dev20261028",
-      "date": "Oct 28, 2026",
+      "version": "1.7.0.dev20261105",
+      "date": "Nov 5, 2026",
       "packages": [
         "ai-dynamo",
         "ai-dynamo-runtime"
       ],
-      "dateIso": "2026-10-28"
+      "dateIso": "2026-11-05"
     },
     {
-      "version": "1.7.0.dev20261027",
-      "date": "Oct 27, 2026",
+      "version": "1.7.0.dev20261103",
+      "date": "Nov 3, 2026",
       "packages": [
         "ai-dynamo",
         "ai-dynamo-runtime"
       ],
-      "dateIso": "2026-10-27"
+      "dateIso": "2026-11-03"
     },
     {
-      "version": "1.7.0.dev20261026",
-      "date": "Oct 26, 2026",
+      "version": "1.7.0.dev20261102",
+      "date": "Nov 2, 2026",
       "packages": [
         "ai-dynamo",
         "ai-dynamo-runtime"
       ],
-      "dateIso": "2026-10-26"
+      "dateIso": "2026-11-02"
     }
   ]
 }
