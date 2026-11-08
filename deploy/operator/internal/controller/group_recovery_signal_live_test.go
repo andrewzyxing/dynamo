@@ -194,6 +194,25 @@ func TestGroupRecoverySignalLive(t *testing.T) {
 		shutdownErrs = append(shutdownErrs, fmt.Errorf("candidate trace close: %w", candidateCloseErr))
 	}
 
+drainBaselineFatal:
+	for {
+		select {
+		case err := <-baselineScope.fatal:
+			runErr = errors.Join(runErr, fmt.Errorf("baseline fatal: %w", err))
+		default:
+			break drainBaselineFatal
+		}
+	}
+drainCandidateFatal:
+	for {
+		select {
+		case err := <-candidateScope.fatal:
+			runErr = errors.Join(runErr, fmt.Errorf("candidate fatal: %w", err))
+		default:
+			break drainCandidateFatal
+		}
+	}
+
 	harnessOK := runErr == nil &&
 		!baselineTrace.failed.Load() &&
 		!candidateTrace.failed.Load() &&
